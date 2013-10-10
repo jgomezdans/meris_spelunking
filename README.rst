@@ -20,6 +20,8 @@ The creation of the VRT files is simple, and it just assumes that the NetCDF fil
 are all under a directory, and that in that directory (or directories below), only
 files related to a single tile are stored. The command is as follows:
 
+::
+
     create_vrt_brockmann.sh <top_level_directory>
     
 This will create a number of different VRT files in the directory specified in
@@ -37,9 +39,13 @@ Once the VRT files have been put together, you can extract times series of BRF
 for individual pixels using the script ``extract_pixels_MCD45_brockmann.py``.
 The script requires a number of options, that you can list with
 
+::
+
     extract_pixels_MCD45_brockmann.py --help
     
 Here's a simple example that is working now:
+
+::
 
      ./extract_pixels_MCD45_brockmann.py \
      -b /data/netapp_4/ucfajlg/MERIS/SS05_Angola_Brockmann/h19v10/2008/MCD64A1/MCD64A1.A2008214.h19v10.005.2009044220220.tif \
