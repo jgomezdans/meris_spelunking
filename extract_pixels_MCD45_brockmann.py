@@ -133,7 +133,7 @@ def extract_pixels ( burn_file, dob_min, dob_max, directory, output_dir, doy_fil
     ( ry, rx ) = np.nonzero ( mask )
     i = np.arange(mask.sum())
     np.random.shuffle ( i )
-    isx = i[ n_pixels ]
+    isx = i[ :n_pixels ]
     the_doys = np.loadtxt( doy_file )
     output_order = all_files # all_files[17:21] + all_files[21:] + all_files[:17]
     output_mult= [ 1. for x in all_files ]
